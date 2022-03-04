@@ -9,19 +9,13 @@ int main()
     cin>>t;
     while(t--)
     {
-        ll n,curr=0;
+        ll n;
         cin>>n;
         vector <ll> a(n);
         for(int i=0;i<n;i++)
-        {
             cin>>a[i];
-        }
         sort(a.begin(),a.end());
-        ll countRed=0,countBlue=0,sumRed=0,sumBlue=0;
-        ll j=n-1;
-        // for(int i=0;i<n;i++)
-        //     cout<<a[i]<<" ";
-        // cout<<endl;
+        ll countRed=0,countBlue=0,sumRed=0,sumBlue=0,j=n-1;
         for(ll i=0;j+1!=i && i<n;i++)
         {
             if(sumRed==0)
@@ -48,7 +42,6 @@ int main()
             }
             if(sumRed>sumBlue && countRed<countBlue)
             {
-
                 cout<<"YES"<<endl;
                 break;
             }
